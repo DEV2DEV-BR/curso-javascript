@@ -1,33 +1,36 @@
-// CRIANDO UM NOVO OBJETO
 const car = {
   name: "Corolla",
-  color: "Black",
-  fabrication: 2023,
-  "size-car": 4,
+  color: "black",
+  fabrication: 2020,
+  "size-car": "4 Metros",
   "air-bag": true,
 };
 
-// ACESSANDO PROPRIEDADES DO OBJETO
+// ACESSAR PROPRIEDADES DE UM OBJETO
 console.log(car.name);
-console.log(car.color);
 console.log(car["size-car"]);
-console.log(car["air-bag"]);
 
-// MODIFICAR AS PROPRIEDADES DE UM OBJETO
+console.log("-------------------------");
+
+// MODIFICAR O VALOR DE UMA PROPRIEDADE
 car.name = "Honda Civic";
-console.log(car.name, "Nome do carro");
+console.log(car.name);
 
-// CRIANDO UMA NOVA PROPRIEDADE DE UM OBJETO
-console.log(car.age, "antes de criar a propriedade");
-car.age = 1;
-console.log(car.age, "após criar a propriedade");
+// CRIAR UMA NOVA PROPRIEDADE
+console.log("========================");
+console.log(car.age);
+car.age = 3;
+console.log(car.age);
 
-// REMOVER UMA PROPRIEDADE
+// DELETAR UMA PROPRIEDADE
+console.log("========================");
 delete car.age;
-console.log(car.age, "Após excluir a propriedade");
+console.log(car.age);
 
-if ("name" in car) {
-  console.log("Existe a propriedade name dentro do objeto car");
+// VERIFICAR SE EXISTE UMA PROPRIEDADE COM ESSE NOME
+console.log("========================");
+if ("names" in car) {
+  console.log("Nome existe dentro de carro");
 } else {
-  console.log("Não existe a propriedade name dentro do objeto car");
+  console.log("Nome não existe dentro de carro");
 }
